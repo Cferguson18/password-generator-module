@@ -26,25 +26,26 @@ function writePassword() {
   numbers = prompt("would you would like numbers (yes/no)");
   symbols = prompt("would you would like special characters (yes/no");
 
-//all 4 choices//
-   if (symbols && numeric && lowercase && uppercase == "yes") { chars += sym && number && lower && upper;}
+     // 1 choice//
+     if(uppercase == "yes") {chars += upper;}
+     if(lowercase == "yes") {chars += lower;}
+     if(symbols == "yes") {chars += sym;}
+     if(numeric == "yes") {chars += number;}
+     //all 2 choices/
+   if(lowercase && uppercase == "yes") {chars += lower && upper;}
+   if(lowercase && symbols == "yes") {chars += lower && sym;}
+   if(symbols && numeric == "yes") {chars += sym && numbers;}  
+   if(symbols && uppercase == "yes") {chars += sym && upper;}
+   if(lowercase && numeric == "yes") {chars += lower && number;}
+   if(numeric && uppercase == "yes") {chars += numbers && upper;}
    //all 3 choices//
-   else if(numeric && lowercase && uppercase == "yes") {chars += numbers && lower && upper;}
-   else if(numeric && uppercase && symbols == "yes") {chars += numbers && sym && upper;}
-   else if(numeric && lowercase && symbols == "yes") {chars += numbers && lower && sym;}
-   else if(symbols && lowercase && uppercase == "yes") {chars += symbols && lower && upper;}
-   //all 2 choices/
-  else if(lowercase && uppercase == "yes") {chars += lower && upper;}
-  else if(lowercase && symbols == "yes") {chars += lower && sym;}
-  else if(symbols && numeric == "yes") {chars += sym && numbers;}  
-  else if(symbols && uppercase == "yes") {chars += sym && upper;}
-  else if(lowercase && numeric == "yes") {chars += lower && number;}
-  else if(numeric && uppercase == "yes") {chars += numbers && upper;}
-   // 1 choice//
-   else if(uppercase == "yes") {chars += upper;}
-   else if(lowercase == "yes") {chars += lower;}
-   else if(symbols == "yes") {chars += sym;}
-   else if(numeric == "yes") {chars += number;}
+    if(numeric && lowercase && uppercase == "yes") {chars += numbers && lower && upper;}
+    if(numeric && uppercase && symbols == "yes") {chars += numbers && sym && upper;}
+    if(numeric && lowercase && symbols == "yes") {chars += numbers && lower && sym;}
+    if(symbols && lowercase && uppercase == "yes") {chars += symbols && lower && upper;}
+   //all 4 choices//
+   if (symbols && numeric && lowercase && uppercase == "yes") { chars += sym && number && lower && upper;}
+   
 //generate passcode with answers//
   var password ="";
   
