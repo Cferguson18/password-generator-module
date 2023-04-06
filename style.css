@@ -102,7 +102,7 @@ button[disabled] {
   -moz-appearance: none;
   appearance: none;
   border: none;
-  display: block;
+  display: flex;
   width: 100%;
   padding-top: 15px;
   padding-left: 15px;
@@ -116,6 +116,18 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+}
+
+textarea {
+  padding: 20px;
+  user-select: none;
+  height: 50px;
+  width: 100px;
+  border-radius: 6px;
+  border: 2px solid;
+  outline: none;
+  font-size: 22px;
+
 }
 
 @media (max-width: 690px) {
